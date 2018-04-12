@@ -7,13 +7,13 @@ using namespace std;
 
 float f(float x)	
 {
-	return x*x*x-2*x;
+	return x*x*x-2*x;	//Р¤СѓРЅРєС†РёСЏ, Р»РѕРєР°Р»СЊРЅС‹Р№ РјРёРЅРёРјСѓРј РєРѕС‚РѕСЂРѕР№ РјС‹ РёС‰РµРј
 }
 
-void dichot(float (*f)(float), float a, float b) //Метод, принимающий указатель на функцию и границы
+void dichot(float (*f)(float), float a, float b) //Р¤СѓРЅРєС†Рё РїСЂРёРЅРёРјР°РµС‚ С„СѓРЅРєС†РёСЋ f Рё РіСЂР°РЅРёС†С‹
 {
 	float x, dx;
-	float eps = 0.0005f;							 //Погрешность метода
+	float eps = 0.0005f;			//РџРѕРіСЂРµС€РЅРѕСЃС‚СЊ РјРµС‚РѕРґР°
 	while (b - a > eps)
 	{
 		dx = (b - a) /2;
@@ -27,10 +27,6 @@ void dichot(float (*f)(float), float a, float b) //Метод, принимающий указатель 
 		}
 	}
 	cout << "Result: " << x << endl;
-}
-void fMethod(float (*f)(float), float a, float b)
-{
-
 }
 
 void gMethod(float (*f)(float), float left, float right)
@@ -68,11 +64,11 @@ int _tmain()
 		 << "\t1.Dichotomy" << endl
 		 << "\t2.Golden-section search" << endl;
 	cin >> c;
-	if (c == 2 || c == 1)		//Пропускаем ввод интервалов, если пользователь ввел недопустимое значение
+	if (c == 2 || c == 1)		//РџСЂРѕРїСѓСЃРєР°РµРј РІРІРѕРґ РёРЅС‚РµСЂРІР°Р»РѕРІ, РµСЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РІРІРµР» РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	{
 		cout << "Enter borders: ";
 		cin >> left >> right;
-		if (left > right)			//Меняем координаты местами, если они введены неверно
+		if (left > right)			//РњРµРЅСЏРµРј РёРЅС‚РµСЂРІР°Р»С‹ РјРµСЃС‚Р°РјРё, РµСЃР»Рё РѕРЅРё РІРІРµРґРµРЅС‹ РЅРµРІРµСЂРЅРѕ
 		{
 			float tmp = left;
 			left = right;
